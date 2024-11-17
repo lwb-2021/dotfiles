@@ -33,6 +33,8 @@ fi
 #
 
 # Remove older command from the history if a duplicate is to be added.
+HISTFILE="$HOME/.zsh_history"
+
 setopt HIST_IGNORE_ALL_DUPS
 
 setopt EXTENDED_HISTORY
