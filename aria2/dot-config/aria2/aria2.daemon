@@ -1,0 +1,13 @@
+continue
+daemon=true
+dir=/home/aria2/Downloads
+file-allocation=none
+log-level=warn
+max-connection-per-server=64
+max-concurrent-downloads=3
+max-overall-download-limit=0
+min-split-size=5M
+enable-http-pipelining=true
+
+enable-rpc=true
+rpc-listen-all=true
