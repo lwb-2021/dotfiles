@@ -52,6 +52,8 @@ M.config = function()
 					else
 						cmp.select_next_item()
 					end
+        else
+          fallback()
 				end
 			end, {"i", "s"})
 
