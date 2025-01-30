@@ -1,6 +1,6 @@
 continue
 daemon=true
-dir=/home/aria2/Downloads
+dir=/home/lwb/Downloads
 file-allocation=none
 log-level=warn
 max-connection-per-server=64
