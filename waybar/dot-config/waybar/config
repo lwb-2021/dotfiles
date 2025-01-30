@@ -1,12 +1,16 @@
 // -*- mode: jsonc -*-
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces"
+    ],
     "modules-center": ["custom/island"],
     "modules-right": [
         "tray",
-        "battery",
-        "clock", "custom/exit"
+        "custom/battery",
+        "clock", 
+        "custom/exit"
     ],
 
     "battery": {
@@ -71,15 +75,27 @@
         "spacing": 10
     },
 
+
+    "custom/battery": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "python ~/.config/waybar/script/battery.py"
+    },
     "custom/exit":{
-        "format": "",
+        "format": "  ",
         "on-click": "wlogout",
         "tooltip-format": "Power Menu"
     },
+    
     "custom/island":{
         "format": "{}",
+        "tooltip": true,
         "return-type": "json",
         "exec": "python ~/.config/waybar/script/island.py",
         "on-click": "python ~/.config/waybar/script/island_event.py click"
+    },
+    "custom/logo":{
+        "format": "  ",
+        "on-click": "rofi -no-config -show-icons -theme docu -modes drun -show drun"
     }
 }
