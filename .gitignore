@@ -3,3 +3,8 @@
 lazy-lock.json
 *.bak
 pid
+
+# ssh
+id_*
+authorized_keys
+known_hosts*
