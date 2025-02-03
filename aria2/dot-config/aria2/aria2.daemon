@@ -11,3 +11,4 @@ enable-http-pipelining=true
 
 enable-rpc=true
 rpc-listen-all=true
+rpc-secret=xDjHqmHVbppu
