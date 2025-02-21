@@ -18,8 +18,8 @@ def write(text, tooltip, state):
 
 
 if __name__ == "__main__":
-    battery = psutil.sensors_battery()
     while True:
+        battery = psutil.sensors_battery()
         if battery is None:
             write("", "none")
             continue
@@ -36,7 +36,7 @@ if __name__ == "__main__":
         if not left >= 0:
             left = "?"
         write(
-            " "*3, 
+            " ", 
             str(battery.percent) + "%" 
                 + " / " + str(left) 
                 + " mins left", 
