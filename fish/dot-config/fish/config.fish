@@ -9,8 +9,12 @@
 #    ...
 # end
 # To include configuration only for interactive shells, use
+
+setenv SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
+
+
 if status is-interactive
     atuin init fish --disable-up-arrow | source
-    fastfetch
     starship init fish | source
+    fastfetch
 end
