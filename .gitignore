@@ -8,3 +8,4 @@ pid
 id_*
 authorized_keys
 known_hosts*
+*.desktop
