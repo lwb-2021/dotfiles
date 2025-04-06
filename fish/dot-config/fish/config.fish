@@ -12,9 +12,22 @@
 
 setenv SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
+
+alias "pandoc-zh"='pandoc --pdf-engine xelatex -V CJKmainfont="微软雅黑"'
 
 if status is-interactive
-    atuin init fish --disable-up-arrow | source
+    thefuck --alias | source
+    fzf --fish | source
     starship init fish | source
     fastfetch
 end
+
+
