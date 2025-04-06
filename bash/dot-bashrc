@@ -11,7 +11,6 @@
 
 alias ls='eza --icons=auto'
 alias grep='grep --color=auto'
-export PATH=/home/lwb/.local/bin:$PATH
 
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 then
