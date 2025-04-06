@@ -29,7 +29,7 @@ if __name__ == "__main__":
         elif precent == 100:
             state = "full"
         else:
-            state = str(precent)
+            state = str(int(precent))
         if battery.power_plugged:
             state += "-charging"
         left = battery.secsleft // 60
