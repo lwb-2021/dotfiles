@@ -3,6 +3,7 @@
     "layer": "top",
     "modules-left": [
         "custom/logo",
+        "custom/desktop",
         "custom/firefox",
         "hyprland/workspaces"
     ],
@@ -67,6 +68,11 @@
         "on-click": "firefox-nightly"
         
     },
+    "custom/desktop":{
+        "format": " ",
+        "on-click": "thunar ~/Desktop"
+    },
+
 
     "custom/battery": {
         "format": "{}",
@@ -88,6 +94,6 @@
     },
     "custom/logo":{
         "format": " ",
-        "on-click": "rofi -no-config -show-icons -theme docu -modes drun -show drun"
+        "on-click": "rofi -no-config -show-icons -theme windows11-grid-dark -modes drun -show drun"
     }
 }
